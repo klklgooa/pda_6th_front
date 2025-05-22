@@ -17,10 +17,16 @@ header {
 
 .navbar {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 50px;
+    padding: 10px 20px;
     flex-wrap: wrap;
+}
+
+
+.social-links {
+    display: flex;
+    gap: 10px;
 }
 
 #logo {
@@ -30,6 +36,7 @@ header {
 .nav-links {
     display: flex;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .nav-links a {
@@ -167,6 +174,7 @@ header {
     display: flex;
     gap: 10px;
     margin-top: 10px;
+    flex-direction: row-reverse;
 }
 
 .card-buttons a {
@@ -174,7 +182,6 @@ header {
     text-align: center;
     text-decoration: none;
     padding: 8px 12px;
-    background-color: #eee;
     color: #333;
     border-radius: 6px;
     font-size: 0.9em;
@@ -324,17 +331,30 @@ header {
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
-        gap: 20px;
+        align-items: flex-start;
+        gap: 10px;
     }
 
     .nav-links {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 15px;
+    }
+
+    .social-links {
+        align-self: flex-end;
+        display: flex;
+        gap: 15px;
+    }
+
+    .intro {
+        flex-direction: column-reverse;
     }
 
     .project-grid {
         grid-template-columns: 1fr;
-        /* 모바일에서는 1개씩 */
     }
 
     .intro h1 {
@@ -342,7 +362,7 @@ header {
     }
 
     .tech-icons {
-        grid-template-columns: repeat(3, 60px);
+        grid-template-columns: repeat(4, 60px);
     }
 
     .project-card img {
@@ -350,7 +370,7 @@ header {
     }
 
     .card-buttons {
-        flex-direction: column;
+        flex-direction: row;
     }
 
     .card-buttons a {
@@ -378,6 +398,10 @@ header {
 
     .project-card p {
         font-size: 0.9em;
+    }
+    
+    .card-buttons {
+        flex-direction: row;
     }
 
     .custom-footer {
