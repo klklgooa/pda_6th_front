@@ -377,9 +377,20 @@ header {
         width: 100%;
     }
 
-    .footer-nav {
-        justify-content: center;
+    .footer-contact {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-end;
     }
+
+    .footer-contact .tel {
+        display: none;
+    }
+
+    footer {
+        gap: 24px;
+    }
+
 }
 
 @media (max-width: 480px) {
@@ -399,7 +410,7 @@ header {
     .project-card p {
         font-size: 0.9em;
     }
-    
+
     .card-buttons {
         flex-direction: row;
     }
